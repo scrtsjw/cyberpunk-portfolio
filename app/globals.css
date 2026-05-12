@@ -1,0 +1,153 @@
+@import "tailwindcss";
+/* =============================================
+   CSS VARIABLES - CYBERPUNK THEME
+   ============================================= */
+:root {
+  --background: #0a0a0f;
+  --foreground: #ededed;
+  --cyan: #00f0ff;
+  --red: #ff003c;
+  --yellow: #fcee0a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* =============================================
+   BASE
+   ============================================= */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+
+  /* Subtle scanline texture */
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 240, 255, 0.015) 2px,
+    rgba(0, 240, 255, 0.015) 4px
+  );
+}
+
+/* =============================================
+   GLITCH EFFECT
+   ============================================= */
+.glitch-wrapper {
+  position: relative;
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-text::before {
+  color: var(--cyan);
+  animation: glitch-1 3s infinite linear;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translateX(-2px);
+}
+
+.glitch-text::after {
+  color: var(--red);
+  animation: glitch-2 3s infinite linear;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  transform: translateX(2px);
+}
+
+@keyframes glitch-1 {
+  0%, 90%, 100% { transform: translateX(-2px); opacity: 0; }
+  92%           { transform: translateX(-4px); opacity: 0.8; }
+  94%           { transform: translateX(2px);  opacity: 0.6; }
+  96%           { transform: translateX(-2px); opacity: 0.8; }
+  98%           { transform: translateX(0);    opacity: 0; }
+}
+
+@keyframes glitch-2 {
+  0%, 90%, 100% { transform: translateX(2px);  opacity: 0; }
+  92%           { transform: translateX(4px);  opacity: 0.8; }
+  94%           { transform: translateX(-2px); opacity: 0.6; }
+  96%           { transform: translateX(2px);  opacity: 0.8; }
+  98%           { transform: translateX(0);    opacity: 0; }
+}
+
+/* =============================================
+   MAGIC NEON CARD
+   ============================================= */
+.magic-neon-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Shine sweep on hover */
+.magic-neon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 30%,
+    rgba(0, 240, 255, 0.06) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.magic-neon-card:hover::before {
+  transform: translateX(100%);
+}
+
+.magic-neon-card:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+  box-shadow:
+    0 0 20px rgba(0, 240, 255, 0.1),
+    inset 0 0 20px rgba(0, 240, 255, 0.05);
+}
+
+/* =============================================
+   SCROLLBAR - CYBERPUNK STYLE
+   ============================================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
+}
+
+/* =============================================
+   SELECTION
+   ============================================= */
+::selection {
+  background: var(--cyan);
+  color: #000;
+}
