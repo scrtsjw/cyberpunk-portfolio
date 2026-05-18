@@ -5,24 +5,24 @@ import { Terminal } from "lucide-react";
 
 const experiences = [
   {
-    role: "Senior Frontend Hacker",
+    role: "Lead Developer",
     company: "CyberCorp Ltd.",
     period: "2024 - Present",
-    desc: "Meretas dan merakit ulang arsitektur web modern menggunakan Next.js dan Framer Motion. Mengoptimalkan performa hingga 99% pada audit Lighthouse.",
+    desc: "Spesialis Arsitektur Cloud dan sistem terdistribusi.",
     active: true,
   },
   {
-    role: "UI/UX Replicator",
+    role: "UI/UX Designer",
     company: "Neon Studio",
     period: "2022 - 2024",
     desc: "Mendesain antarmuka futuristik dan mengimplementasikan desain sistem berbasis Tailwind CSS.",
     active: false,
   },
   {
-    role: "Junior Web Dev",
+    role: "Backend Engineer",
     company: "PixelForge",
     period: "2020 - 2022",
-    desc: "Membangun landing page dan aplikasi web sederhana menggunakan React dan REST API.",
+    desc: "Fokus pada optimasi database dan keamanan API.",
     active: false,
   },
 ];
@@ -38,7 +38,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-3 text-white border-b border-gray-800 pb-4">
-            <Terminal className="text-[#fcee0a]" /> LOG_PENGALAMAN
+            <Terminal className="text-[#fcee0a]" /> LOG PENGALAMAN
           </h2>
 
           {/* Bio */}

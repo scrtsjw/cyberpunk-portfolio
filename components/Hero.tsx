@@ -36,13 +36,13 @@ export default function Hero() {
 
           <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tighter text-white glitch-wrapper">
             <span className="glitch-text" data-text="NETRUNNER_DEV">
-              PANDU RIDHO WICAKSONO
+              NEVER GOON TEAM
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
-            Saya Adalah Siswa kelas 11 di SMK RAJASA, di Sekolah ini saya mendalami tentang{" "}
-            <span className="text-[#ff003c] font-bold">TKJ</span> agar saya bisa mendapatkan ilmu yang{" "}
+            Kami Adalah Siswa kelas 11 di SMK RAJASA, di Sekolah ini kami mendalami tentang{" "}
+            <span className="text-[#ff003c] font-bold">TKJ</span> agar kami bisa mendapatkan ilmu yang{" "}
             <span className="text-[#00f0ff] font-bold">Bermanfaat</span>.
           </p>
 

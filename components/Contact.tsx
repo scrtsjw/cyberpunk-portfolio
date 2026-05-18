@@ -23,7 +23,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl font-bold mb-12 flex items-center gap-3 text-white border-b border-gray-800 pb-4">
-            <Mail className="text-[#00f0ff]" /> INISIALISASI_KONTAK
+            <Mail className="text-[#00f0ff]" /> INISIALISASI KONTAK
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
