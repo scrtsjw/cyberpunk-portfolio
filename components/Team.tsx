@@ -60,12 +60,12 @@ export default function CyberTeam() {
       id="team"
       className="py-32 px-6 bg-[#050505] relative overflow-hidden font-mono"
     >
-      {/* Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
+      {/* Background Grid — bg-size-[40px_40px] (was bg-[size:40px_40px]) */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[40px_40px]" />
 
-      {/* Glow Effects */}
+      {/* Glow Effects — w-125 h-125 (was w-[500px] h-[500px]) */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#ff003c]/10 blur-[120px] rounded-full" />
-      <div className="absolute top-1/2 -right-24 w-[500px] h-[500px] bg-[#00f0ff]/10 blur-[150px] rounded-full" />
+      <div className="absolute top-1/2 -right-24 w-125 h-125 bg-[#00f0ff]/10 blur-[150px] rounded-full" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
@@ -88,7 +88,8 @@ export default function CyberTeam() {
             className="text-5xl md:text-7xl font-black text-white italic tracking-tighter"
           >
             TIM{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] via-[#ff003c] to-[#00f0ff] bg-[length:200%_auto] animate-gradient">
+            {/* bg-linear-to-r (was bg-gradient-to-r), bg-size-[200%_auto] (was bg-[length:200%_auto]) */}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#00f0ff] via-[#ff003c] to-[#00f0ff] bg-size-[200%_auto] animate-gradient">
               KREATIF
             </span>
           </motion.h3>
@@ -110,9 +111,9 @@ export default function CyberTeam() {
                 {member.id}
               </span>
 
-              {/* Card */}
+              {/* Card — p-px (was p-[1px]), bg-linear-to-br (was bg-gradient-to-br) */}
               <div
-                className={`relative p-[1px] bg-gradient-to-br ${member.borderColor} transition-all duration-500 overflow-hidden shadow-2xl ${member.shadowColor}`}
+                className={`relative p-px bg-linear-to-br ${member.borderColor} transition-all duration-500 overflow-hidden shadow-2xl ${member.shadowColor}`}
               >
                 <div
                   className="bg-[#0a0a0a] p-6 relative"
@@ -121,18 +122,19 @@ export default function CyberTeam() {
                       "polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%)",
                   }}
                 >
-                  {/* Image */}
-                  <div className="relative w-full aspect-[4/5] mb-6 overflow-hidden border border-white/10 group-hover:border-[#00f0ff]/50 transition-colors">
+                  {/* Image — aspect-4/5 (was aspect-[4/5]) */}
+                  <div className="relative w-full aspect-4/5 mb-6 overflow-hidden border border-white/10 group-hover:border-[#00f0ff]/50 transition-colors">
                     <motion.img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover filter contrast-125 brightness-75 group-hover:brightness-100 group-hover:scale-110 transition-all duration-700"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
+                    {/* bg-linear-to-t (was bg-gradient-to-t) */}
+                    <div className="absolute inset-0 bg-linear-to-t from-[#0a0a0a] via-transparent to-transparent" />
 
-                    {/* Scan Lines */}
-                    <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,240,255,0.1)_50%)] bg-[length:100%_4px] opacity-20 pointer-events-none" />
+                    {/* Scan Lines — bg-size-[100%_4px] (was bg-[length:100%_4px]) */}
+                    <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,240,255,0.1)_50%)] bg-size-[100%_4px] opacity-20 pointer-events-none" />
                   </div>
 
                   {/* Info */}
@@ -142,8 +144,9 @@ export default function CyberTeam() {
                         {member.name}
                       </h4>
 
+                      {/* bg-linear-to-r (was bg-gradient-to-r) */}
                       <p
-                        className={`text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r ${member.color}`}
+                        className={`text-xs font-bold bg-clip-text text-transparent bg-linear-to-r ${member.color}`}
                       >
                         // {member.role}
                       </p>

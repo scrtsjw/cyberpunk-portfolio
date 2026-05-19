@@ -58,9 +58,9 @@ export default function Projects() {
                 whileHover={{ y: -4 }}
                 className="magic-neon-card p-6 rounded-xl group relative overflow-hidden"
               >
-                {/* Neon Top Line */}
+                {/* Neon Top Line — h-0.5 (was h-[2px]) */}
                 <div
-                  className="absolute top-0 left-0 right-0 h-[2px]"
+                  className="absolute top-0 left-0 right-0 h-0.5"
                   style={{
                     background: `linear-gradient(90deg, transparent, ${project.color}, transparent)`,
                   }}
