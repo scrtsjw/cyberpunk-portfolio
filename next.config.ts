@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/cyberpunk-portfolio", // sesuai nama repo GitHub kamu
+  basePath: "/cyberpunk-portfolio",
 };
 
 export default nextConfig;
