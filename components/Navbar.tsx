@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="font-mono font-black text-lg text-white tracking-widest">
-          <span className="text-[#00f0ff]">&gt;</span> GOONRUNNER
+          <span className="text-[#00f0ff]">&gt;</span> AKATSUKI
           <span className="animate-pulse text-[#fcee0a]">_</span>
         </a>
 

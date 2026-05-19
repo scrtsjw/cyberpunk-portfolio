@@ -36,7 +36,7 @@ export default function Hero() {
 
           <h1 className="text-5xl md:text-7xl font-black mb-4 tracking-tighter text-white glitch-wrapper">
             <span className="glitch-text" data-text="NETRUNNER_DEV">
-              NEVER GOON TEAM
+              AKATSUKI 
             </span>
           </h1>
 

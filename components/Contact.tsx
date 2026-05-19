@@ -37,7 +37,7 @@ export default function Contact() {
               <div className="space-y-4 font-mono text-sm">
                 <div className="flex items-center gap-3 text-gray-500">
                   <span className="text-[#00f0ff]">&gt;</span>
-                  <span>hello@netrunner.dev</span>
+                  <span>hello asepjumping877@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-500">
                   <span className="text-[#ff003c]">&gt;</span>
